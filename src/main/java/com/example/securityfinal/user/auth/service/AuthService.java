@@ -1,8 +1,8 @@
-package com.example.securityfinal.user.auth;
+package com.example.securityfinal.user.auth.service;
 
 import com.example.securityfinal.user.User;
 import com.example.securityfinal.user.dto.request.authRequest;
-import com.example.securityfinal.user.repository.userReposetory; // 실제 파일명이 userReposetory인지 확인 필요
+import com.example.securityfinal.user.repository.UserReposetory; // 실제 파일명이 userReposetory인지 확인 필요
 import com.example.securityfinal.user.Role;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -14,7 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class AuthService {
 
-    private final userReposetory userRepository;
+    private final UserReposetory userRepository;
     private final PasswordEncoder encoder;
 
     public void createAuth(authRequest authRequest) {

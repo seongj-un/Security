@@ -1,5 +1,6 @@
-package com.example.securityfinal.user.auth;
+package com.example.securityfinal.user.auth.controller;
 
+import com.example.securityfinal.user.auth.service.AuthService;
 import lombok.Getter;
 import com.example.securityfinal.user.dto.request.authRequest;
 import lombok.RequiredArgsConstructor;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @Getter
 @RequestMapping("/auth")
 @RequiredArgsConstructor
-public class authController {
+public class AuthController {
 
     private final AuthService authService;
 

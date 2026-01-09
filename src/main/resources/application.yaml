@@ -1,1 +1,23 @@
-spring.application.name=SecurityFinal
+spring:
+  datasource:
+    # 데이터베이스 연결 URL (이미지의 포트 8080 반영)
+    url: jdbc:mysql://127.0.0.1:3306/securityFinal?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    # 사용자 이름
+    username: root
+    # 비밀번호 (본인이 설정한 비밀번호를 입력하세요)
+    password: 1234
+    # MySQL 드라이버 설정
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      # 애플리케이션 실행 시 테이블 자동 생성 옵션 (개발 시에는 update 또는 create 사용)
+      ddl-auto: update
+    properties:
+      hibernate:
+        # 실행되는 SQL을 콘솔에 출력
+        show_sql: true
+        # 출력되는 SQL을 보기 좋게 포맷팅
+        format_sql: true
+        # 하이버네이트가 사용하는 SQL 종류(방언) 설정
+        dialect: org.hibernate.dialect.MySQLDialect
